@@ -1,0 +1,23 @@
+- Memory consists of RAM, Harddisk, cache, and registers
+- Short term scheduling programs are programs that control which programs (on ram memory) are passed to the cpu at any given time
+- An operating system is essentially a resource manager
+- Each core in a CPU is essentially a mini CPU
+- Even with only one core, you can have multiple programs inside RAM
+- The OS code that controls the other programs taken from the hard drive to the ram is called the scheduler
+- The scheduler is responsible for determining the importance of certain processes(programs and/or files)
+- Shortest Job First Scheduling Algorithm: Processes with the lowest execution time will be given precedence 
+    - Burst time is the same as execution time
+    - Turn around Time = Completion time - Arrival Time
+    - Your CPU is idle when it is not completing any processes
+    - Multiple files can arrive to the same CPU at the same time but have to be bursted seperately
+    - Completion time is the time it takes (from when the cpu starts taking in files) for a file to be executed
+        - So Completion time is dependent on what other files are being sent to the CPU from RAM
+- Shortest Remaining Time First Scheduling Algorithm: CPU keeps track of other files as they arrive, even if there is a file currently executing,
+and if a file that has just arrived has a lower execution time than the remaining execution time of the current executing file, then the new file will 
+begin to execute
+    - If there are two files with the same execution time that are both waiting to be executed, then the file that arrived earlier will be the one that 
+    continues to run
+- Shedule length is the amount of time it takes a certain number of programs to finish executing
+- Throughput is the amount of files executed / the schedule length
+- In any non preemptive scheduling algorithm, response time = waiting time, but this may not be true for preemptive scheduling algorithms
+- 
