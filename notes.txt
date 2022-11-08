@@ -20,4 +20,31 @@ begin to execute
 - Shedule length is the amount of time it takes a certain number of programs to finish executing
 - Throughput is the amount of files executed / the schedule length
 - In any non preemptive scheduling algorithm, response time = waiting time, but this may not be true for preemptive scheduling algorithms
-- 
+- Turn around Time is completion time - arrival time
+- Waiting time is turn around time - burst time
+- First Come First Served Scheduling Algorithm: The process which has the least arrival time will be scheduled First
+    - Allows programs to complete without interuption 
+    - It is non-preemptive
+- CPU Efficiency is Useful Time / Total Time (that it takes to execute a number of programs)
+- Non Useful time is usually time that it takes for a CPU to switch contexts
+- Non Useful time does need to be included in completion time calculations
+- Any priority based scheduling algorithm will defninitely suffer from the problem of starvation
+- An algorithm suffers from starvation problem if there is a chance for a process in the ready state to wait indefinitely to get the CPU
+- Any priority based scheduling algorithm will be considered to suffer from starvation even if all of the programs run indefinitely
+- The convoy effect is when a smaller process (process with a very small execution time) is waiting for one big process to be released from the CPU
+    - This could be an issue with first come first served scheduling algorithms
+- An algorithm with the Convoy Effect may lead to higher waiting times and higher TAT 
+- Shortest Job First and Shortest Remaining Time First Scheduling Alrorithms are objectively more efficient, but harder to execute as the burst times 
+of programs must be known before they are ran
+- Throughput = Number of processes executed / schedule length
+- Longest Job First Scheduling Algorithm: Among all arrived Processes, the ones with the longest burst time will be scheduled first
+    - Starvation will be a major issue with this algorithm
+    - Allows programs to complete their full executions without context switching
+- Longest Remaining Time First Scheduling Algorithm: Similar to LJFS except it would allow context switching
+- Time Quantum: Maximum allowable time a process can run without getting preempted
+- Round-Robin Scheduling Algorithm:
+    - It works on the basis of Time Quantum
+    - It uses the queue data structure
+    - Very Popular and used in most operating sysems
+    - A program can run for less time than the time quantum, but not more time
+
