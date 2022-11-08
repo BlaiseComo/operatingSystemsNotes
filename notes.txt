@@ -47,4 +47,7 @@ of programs must be known before they are ran
     - It uses the queue data structure
     - Very Popular and used in most operating sysems
     - A program can run for less time than the time quantum, but not more time
-
+- Highest Response Ratio Next Scheduling Algorithm: 
+    - Response Ratio = ((Wait Time + Burst Time) / Burst Time)
+    - The higher the response ratio, the higher the chance that process will be executed
+    - Non Preemptive (No Context Switching)
