@@ -1,0 +1,18 @@
+- The programmer writes a program using a sequence of assembler instructions
+    - These lines of code are source code
+    - THe assembler program takes each line of code and generates binary
+    - The object code is the sequence of binary
+    - The bootstrap loader loads the operating system in BIOS
+- A BIOS doesn't know how to load an OS, a bootsector must do this. 
+    - The location of a bootsector must be the first sector of the disk (cylinder 0, head 0, sector 0) 
+    and it takes 512 bytes
+    - To check that the disk is bootable, the BIOS checks that bytes 511 and 512 are bytes 0xAA55
+- A very simple boot sector in assembly:
+; Infinite loop (e9 fd ff)
+loop:
+    jmp loop
+
+; Fill with 510 zeros minus the size of the previous code
+time 510-($-$$) db 0
+; Magic Number
+dw 0xaa55
